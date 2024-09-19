@@ -2,3 +2,6 @@ name: CreazyLibExample
 version: '${project.version}'
 main: pl.creazy.creazylibexample.CreazyLibExample
 api-version: '1.21'
+commands:
+  example:
+    description: example

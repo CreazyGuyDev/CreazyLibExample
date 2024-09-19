@@ -7,8 +7,8 @@ import pl.creazy.creazylibexample.CreazyLibExample;
 
 @Part
 class ExampleConfig {
-  @OnEnable
-  void testConfig(@Part CreazyLibExample plugin) {
+  @OnEnable // This method will run when part gets enabled
+  void testConfig(@Part CreazyLibExample plugin) { // can use other parts inside @OnEnable
     var config = Config.getConfig("name", "path", plugin);
     config.set("path", "value");
     config.set("number", 21);

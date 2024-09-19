@@ -6,13 +6,13 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import pl.creazy.creazylib.part.constraints.Part;
 import pl.creazy.creazylib.util.message.Message;
 
-@Part
+@Part // listeners from part will be auto registered
 class ExampleListener implements Listener {
-  @Part
+  @Part // Can inject other parts to fields inside current part
   private ExampleManager exampleManager;
 
   @EventHandler
   void onEvent(PlayerJoinEvent event) {
-    Message.sendChat(event.getPlayer(), "&aSiema");
+    Message.sendChat(event.getPlayer(), "&aSiema"); // This will format and send the message to the player
   }
 }
